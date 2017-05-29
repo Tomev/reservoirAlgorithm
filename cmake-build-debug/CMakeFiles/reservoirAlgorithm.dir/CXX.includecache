@@ -13,6 +13,10 @@ iostream
 -
 fstream
 -
+vector
+-
+sstream
+-
 textDataReader.h
 C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
 
@@ -24,8 +28,6 @@ C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.h
 
 C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.cpp
 c++/iostream
--
-string
 -
 textDataReader.h
 C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
