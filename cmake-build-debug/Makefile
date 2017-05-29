@@ -176,6 +176,33 @@ reservoirSamplingAlgorithm.cpp.s:
 	$(MAKE) -f CMakeFiles\reservoirAlgorithm.dir\build.make CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.s
 .PHONY : reservoirSamplingAlgorithm.cpp.s
 
+textDataParser.obj: textDataParser.cpp.obj
+
+.PHONY : textDataParser.obj
+
+# target to build an object file
+textDataParser.cpp.obj:
+	$(MAKE) -f CMakeFiles\reservoirAlgorithm.dir\build.make CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj
+.PHONY : textDataParser.cpp.obj
+
+textDataParser.i: textDataParser.cpp.i
+
+.PHONY : textDataParser.i
+
+# target to preprocess a source file
+textDataParser.cpp.i:
+	$(MAKE) -f CMakeFiles\reservoirAlgorithm.dir\build.make CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.i
+.PHONY : textDataParser.cpp.i
+
+textDataParser.s: textDataParser.cpp.s
+
+.PHONY : textDataParser.s
+
+# target to generate assembly for a file
+textDataParser.cpp.s:
+	$(MAKE) -f CMakeFiles\reservoirAlgorithm.dir\build.make CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.s
+.PHONY : textDataParser.cpp.s
+
 textDataReader.obj: textDataReader.cpp.obj
 
 .PHONY : textDataReader.obj
@@ -218,6 +245,9 @@ help:
 	@echo ... reservoirSamplingAlgorithm.obj
 	@echo ... reservoirSamplingAlgorithm.i
 	@echo ... reservoirSamplingAlgorithm.s
+	@echo ... textDataParser.obj
+	@echo ... textDataParser.i
+	@echo ... textDataParser.s
 	@echo ... textDataReader.obj
 	@echo ... textDataReader.i
 	@echo ... textDataReader.s

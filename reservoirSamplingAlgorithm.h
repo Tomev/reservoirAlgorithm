@@ -5,18 +5,24 @@
 #ifndef RESERVOIRALGORITHM_RESERVOIRSAMPLINGALGORITHM_H
 #define RESERVOIRALGORITHM_RESERVOIRSAMPLINGALGORITHM_H
 
+#include "textDataReader.h"
+#include "textDataParser.h"
 
 class reservoirSamplingAlgorithm
 {
+
   public:
-    //
-    // Public data sample function
-    // sampleData(vector target,
+
+    reservoirSamplingAlgorithm(textDataReader *reader, textDataParser* parser);
+    void fillReservoir(std::vector<sample> *reservoir);
+
   private:
     const int RESERVOIR_SIZE = 1000;
-    // Need vector of objects - the reservoir
-    // Need function pointer that'll return next data line (thus string). Data reader?
-    // Need data parser.
+    const int STEPS_NUMBER = 20000;
+
+    textDataReader *reader;
+    textDataParser *parser;
+
 };
 
 

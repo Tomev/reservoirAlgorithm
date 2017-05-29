@@ -2,8 +2,13 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include <c++/random>
+#include <c++/chrono>
 
 #include "textDataReader.h"
+#include "textDataParser.h"
+
+#include "reservoirSamplingAlgorithm.h"
 
 struct attributeData
 {
@@ -17,19 +22,32 @@ void gatherAttributesData(textDataReader* tdr);
 
 int main()
 {
+  // Initialize time-dependent random seed
+  srand (time(NULL));
+
   std::ifstream sourceFile("D:\\Dysk Google\\Data Streams\\powersupply.arff");
 
   std::string line;
 
   textDataReader tdr(&sourceFile);
+  textDataParser tdp;
 
   gatherAttributesData(&tdr);
 
-  for(int i = 0; i < attributes.size(); ++i)
+  while(line.find("@data")) tdr.getNextRawDatum(&line);
+  tdr.getNextRawDatum(&line);
+
+  reservoirSamplingAlgorithm a(&tdr, &tdp);
+
+  std::vector<sample> reservoir;
+
+  a.fillReservoir(&reservoir);
+
+  for(int i = 0; i < reservoir.size(); ++i)
   {
-    std::cout << attributes.at(i).attributeName << " ";
-    std::cout << attributes.at(i).attributeType << std::endl;
+    reservoir.at(i).print();
   }
+
 
   return 0;
 }

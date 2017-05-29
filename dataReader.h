@@ -12,10 +12,6 @@ class dataReader
 
     virtual void getNextRawDatum(void *target) = 0;
 
-  protected:
-
-    long currentPosition = 0;
-
 };
 
 

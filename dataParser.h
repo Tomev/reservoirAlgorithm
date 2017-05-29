@@ -10,7 +10,7 @@ class dataParser
 {
   public:
 
-    virtual void parseData(void* source, void *target);
+    virtual void parseData(void* source, void *target) = 0;
 };
 
 

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/main.cpp" "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/main.cpp.obj"
   "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.cpp" "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj"
+  "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.cpp" "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj"
   "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.cpp" "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

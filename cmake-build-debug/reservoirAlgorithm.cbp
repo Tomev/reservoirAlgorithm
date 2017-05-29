@@ -95,6 +95,12 @@
 		<Unit filename="C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.h">
 			<Option target="reservoirAlgorithm"/>
 		</Unit>
+		<Unit filename="C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.cpp">
+			<Option target="reservoirAlgorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.h">
+			<Option target="reservoirAlgorithm"/>
+		</Unit>
 		<Unit filename="C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.cpp">
 			<Option target="reservoirAlgorithm"/>
 		</Unit>
