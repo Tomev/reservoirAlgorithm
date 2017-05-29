@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/dataReader.h
+
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/main.cpp
+iostream
+-
+fstream
+-
+textDataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
+
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.cpp
+reservoirSamplingAlgorithm.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.h
+
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.h
+
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.cpp
+c++/iostream
+-
+string
+-
+textDataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
+
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
+dataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/dataReader.h
+fstream
+-
+string
+-
+
