@@ -23,6 +23,8 @@ class reservoirSamplingAlgorithm
     textDataReader *reader;
     textDataParser *parser;
 
+    void initializeReservoir(std::vector<sample> *reservoir);
+
 };
 
 

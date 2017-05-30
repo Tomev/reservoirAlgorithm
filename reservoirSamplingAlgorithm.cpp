@@ -9,17 +9,9 @@ reader(reader), parser(parser) {}
 
 void reservoirSamplingAlgorithm::fillReservoir(std::vector<sample> *reservoir)
 {
+  initializeReservoir(reservoir);
+
   std::string rawData;
-
-  for(int step = 0; step < RESERVOIR_SIZE; ++step)
-  {
-    reader->getNextRawDatum(&rawData);
-
-    reservoir->push_back(sample());
-
-    parser->parseData(&rawData, &(reservoir->at(reservoir->size()-1)));
-    reservoir->at(reservoir->size()-1).dataId = step;
-  }
 
   double addChance;
 
@@ -37,6 +29,20 @@ void reservoirSamplingAlgorithm::fillReservoir(std::vector<sample> *reservoir)
 
       reservoir->at(idxToDelete).dataId = step;
     }
-
   }
+}
+
+void reservoirSamplingAlgorithm::initializeReservoir(std::vector<sample> *reservoir)
+{
+    std::string rawData;
+
+    for(int step = 0; step < RESERVOIR_SIZE; ++step)
+    {
+        reader->getNextRawDatum(&rawData);
+
+        reservoir->push_back(sample());
+
+        parser->parseData(&rawData, &(reservoir->at(reservoir->size()-1)));
+        reservoir->at(reservoir->size()-1).dataId = step;
+    }
 }

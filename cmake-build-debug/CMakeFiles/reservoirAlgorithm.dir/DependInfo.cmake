@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/main.cpp" "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/main.cpp.obj"
-  "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.cpp" "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj"
-  "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.cpp" "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj"
-  "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.cpp" "C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj"
+  "D:/Coding/C++/reservoirAlgorithm/main.cpp" "D:/Coding/C++/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/main.cpp.obj"
+  "D:/Coding/C++/reservoirAlgorithm/reservoirSamplingAlgorithm.cpp" "D:/Coding/C++/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj"
+  "D:/Coding/C++/reservoirAlgorithm/textDataParser.cpp" "D:/Coding/C++/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj"
+  "D:/Coding/C++/reservoirAlgorithm/textDataReader.cpp" "D:/Coding/C++/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
