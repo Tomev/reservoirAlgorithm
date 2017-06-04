@@ -122,6 +122,33 @@ reservoirAlgorithm/fast:
 	$(MAKE) -f CMakeFiles\reservoirAlgorithm.dir\build.make CMakeFiles/reservoirAlgorithm.dir/build
 .PHONY : reservoirAlgorithm/fast
 
+biasedReservoirSamplingAlgorithm.obj: biasedReservoirSamplingAlgorithm.cpp.obj
+
+.PHONY : biasedReservoirSamplingAlgorithm.obj
+
+# target to build an object file
+biasedReservoirSamplingAlgorithm.cpp.obj:
+	$(MAKE) -f CMakeFiles\reservoirAlgorithm.dir\build.make CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.obj
+.PHONY : biasedReservoirSamplingAlgorithm.cpp.obj
+
+biasedReservoirSamplingAlgorithm.i: biasedReservoirSamplingAlgorithm.cpp.i
+
+.PHONY : biasedReservoirSamplingAlgorithm.i
+
+# target to preprocess a source file
+biasedReservoirSamplingAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles\reservoirAlgorithm.dir\build.make CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.i
+.PHONY : biasedReservoirSamplingAlgorithm.cpp.i
+
+biasedReservoirSamplingAlgorithm.s: biasedReservoirSamplingAlgorithm.cpp.s
+
+.PHONY : biasedReservoirSamplingAlgorithm.s
+
+# target to generate assembly for a file
+biasedReservoirSamplingAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles\reservoirAlgorithm.dir\build.make CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.s
+.PHONY : biasedReservoirSamplingAlgorithm.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -239,6 +266,9 @@ help:
 	@echo ... reservoirAlgorithm
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... biasedReservoirSamplingAlgorithm.obj
+	@echo ... biasedReservoirSamplingAlgorithm.i
+	@echo ... biasedReservoirSamplingAlgorithm.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

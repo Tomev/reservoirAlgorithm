@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.cpp">
+			<Option target="reservoirAlgorithm"/>
+		</Unit>
+		<Unit filename="D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h">
+			<Option target="reservoirAlgorithm"/>
+		</Unit>
 		<Unit filename="D:/Coding/C++/reservoirAlgorithm/dataParser.h">
 			<Option target="reservoirAlgorithm"/>
 		</Unit>

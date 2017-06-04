@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj"
   "CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj"
   "CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj"
+  "CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.obj"
   "reservoirAlgorithm.pdb"
   "reservoirAlgorithm.exe"
   "reservoirAlgorithm.exe.manifest"

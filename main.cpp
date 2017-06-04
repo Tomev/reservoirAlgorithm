@@ -9,6 +9,7 @@
 #include "textDataParser.h"
 
 #include "reservoirSamplingAlgorithm.h"
+#include "biasedReservoirSamplingAlgorithm.h"
 
 struct attributeData
 {
@@ -37,7 +38,8 @@ int main()
   while(line.find("@data")) tdr.getNextRawDatum(&line);
   tdr.getNextRawDatum(&line);
 
-  reservoirSamplingAlgorithm a(&tdr, &tdp);
+  biasedReservoirSamplingAlgorithm a(&tdp, &tdr);
+  //reservoirSamplingAlgorithm a(&tdr, &tdp);
 
   std::vector<sample> reservoir;
 
@@ -45,6 +47,7 @@ int main()
 
   for(int i = 0; i < reservoir.size(); ++i)
   {
+    std::cout << "Sample number " << i+1 << ": ";
     reservoir.at(i).print();
   }
 

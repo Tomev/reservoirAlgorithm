@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.cpp
+biasedReservoirSamplingAlgorithm.h
+D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h
+
+D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h
+textDataReader.h
+D:/Coding/C++/reservoirAlgorithm/textDataReader.h
+textDataParser.h
+D:/Coding/C++/reservoirAlgorithm/textDataParser.h
+
 D:/Coding/C++/reservoirAlgorithm/dataParser.h
 
 D:/Coding/C++/reservoirAlgorithm/dataReader.h
@@ -29,6 +39,8 @@ textDataParser.h
 D:/Coding/C++/reservoirAlgorithm/textDataParser.h
 reservoirSamplingAlgorithm.h
 D:/Coding/C++/reservoirAlgorithm/reservoirSamplingAlgorithm.h
+biasedReservoirSamplingAlgorithm.h
+D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h
 
 D:/Coding/C++/reservoirAlgorithm/reservoirSamplingAlgorithm.cpp
 reservoirSamplingAlgorithm.h

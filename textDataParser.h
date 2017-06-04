@@ -18,7 +18,7 @@ struct sample
 
   void print()
   {
-    std::cout << dataId << ". ";
+    std::cout << "Step: " << dataId << ". Data: ";
 
     for(int i = 0; i < values.size(); ++i)
     {
