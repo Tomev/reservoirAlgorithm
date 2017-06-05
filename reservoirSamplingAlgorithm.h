@@ -5,8 +5,8 @@
 #ifndef RESERVOIRALGORITHM_RESERVOIRSAMPLINGALGORITHM_H
 #define RESERVOIRALGORITHM_RESERVOIRSAMPLINGALGORITHM_H
 
-#include "textDataReader.h"
-#include "textDataParser.h"
+#include "dataReader.h"
+#include "dataParser.h"
 
 class reservoirSamplingAlgorithm
 {

@@ -5,8 +5,8 @@
 #ifndef RESERVOIRALGORITHM_BIASEDRESERVOIRSAMPLINGALGORITHM_H
 #define RESERVOIRALGORITHM_BIASEDRESERVOIRSAMPLINGALGORITHM_H
 
-#include "textDataReader.h"
-#include "textDataParser.h"
+#include "dataReader.h"
+#include "dataParser.h"
 
 /*
  *      A class for biased reservoir sampling as proposed in:
