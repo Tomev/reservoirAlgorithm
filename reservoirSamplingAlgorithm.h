@@ -11,11 +11,13 @@
 class reservoirSamplingAlgorithm
 {
   public:
-    virtual void fillReservoir(void *reservoir);
+    virtual void fillReservoir(void *reservoir) = 0;
 
   protected:
     dataParser *parser;
     dataReader *reader;
+
+    int stepsNumber = 10000;
 };
 
 #endif //RESERVOIRALGORITHM_RESERVOIRSAMPLINGALGORITHM_H

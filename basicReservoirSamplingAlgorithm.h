@@ -14,16 +14,12 @@ class basicReservoirSamplingAlgorithm : public reservoirSamplingAlgorithm
 
   public:
 
-  basicReservoirSamplingAlgorithm(dataReader *reader, dataParser* parser);
+  basicReservoirSamplingAlgorithm(dataReader *reader, dataParser* parser, int reservoirSize, int stepsNumber);
     void fillReservoir(void *reservoir);
 
   private:
-    const int RESERVOIR_SIZE = 1000;
-    const int STEPS_NUMBER = 20000;
 
-    dataReader *reader;
-    dataParser *parser;
-
+    int reservoirSize = 1000;
 
     void initializeReservoir(void *reservoir);
 

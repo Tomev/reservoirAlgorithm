@@ -4,8 +4,14 @@
 
 #include "basicReservoirSamplingAlgorithm.h"
 
-basicReservoirSamplingAlgorithm::basicReservoirSamplingAlgorithm(dataReader *reader, dataParser *parser) :
-reader(reader), parser(parser) {}
+basicReservoirSamplingAlgorithm::basicReservoirSamplingAlgorithm(
+        dataReader *reader, dataParser *parser, int reservoirSize, int stepsNumber) :
+        reservoirSize(reservoirSize)
+{
+  this->reader = reader;
+  this->parser = parser;
+  this->stepsNumber = stepsNumber;
+}
 
 void basicReservoirSamplingAlgorithm::fillReservoir(void *reservoir)
 {
@@ -15,15 +21,15 @@ void basicReservoirSamplingAlgorithm::fillReservoir(void *reservoir)
 
   double addChance;
 
-  for(int step = RESERVOIR_SIZE+1; step < STEPS_NUMBER; ++step)
+  for(int step = reservoirSize+1; step < reservoirSize; ++step)
   {
-    addChance = (double) RESERVOIR_SIZE/step;
+    addChance = (double) reservoirSize/step;
     reader->getNextRawDatum(&rawData);
 
     if(addChance > ((double) rand() / (RAND_MAX)))
     {
       // Adding to reservoir
-      int idxToDelete = (((double) rand() / (RAND_MAX)) * RESERVOIR_SIZE);
+      int idxToDelete = (((double) rand() / (RAND_MAX)) * reservoirSize);
 
       parser->writeDatumOnPosition(&rawData, reservoir, idxToDelete);
     }
@@ -34,7 +40,7 @@ void basicReservoirSamplingAlgorithm::initializeReservoir(void *reservoir)
 {
     std::string rawData;
 
-    for(int step = 0; step < RESERVOIR_SIZE; ++step)
+    for(int step = 0; step < reservoirSize; ++step)
     {
         reader->getNextRawDatum(&rawData);
 
