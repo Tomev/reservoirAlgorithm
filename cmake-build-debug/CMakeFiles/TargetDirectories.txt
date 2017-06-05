@@ -1,3 +1,0 @@
-C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/reservoirAlgorithm.dir
-C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Tomek/ClionProjects/reservoirAlgorithm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
