@@ -8,6 +8,8 @@
 #include "dataReader.h"
 #include "dataParser.h"
 
+#include <random>
+
 /*
  *      A class for biased reservoir sampling as proposed in:
  *      On biased reservoir sampling in the presence of stream evolution by Aggarwal C..

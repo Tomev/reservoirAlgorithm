@@ -8,6 +8,8 @@
 #include "dataReader.h"
 #include "dataParser.h"
 
+#include <random>
+
 class reservoirSamplingAlgorithm
 {
 
