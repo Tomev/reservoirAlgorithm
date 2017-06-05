@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.cpp
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.cpp
 biasedReservoirSamplingAlgorithm.h
-D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h
 
-D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h
 textDataReader.h
-D:/Coding/C++/reservoirAlgorithm/textDataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
 textDataParser.h
-D:/Coding/C++/reservoirAlgorithm/textDataParser.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.h
 
-D:/Coding/C++/reservoirAlgorithm/dataParser.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/dataParser.h
 
-D:/Coding/C++/reservoirAlgorithm/dataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/dataReader.h
 
-D:/Coding/C++/reservoirAlgorithm/main.cpp
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/main.cpp
 iostream
 -
 fstream
@@ -34,31 +34,31 @@ c++/random
 c++/chrono
 -
 textDataReader.h
-D:/Coding/C++/reservoirAlgorithm/textDataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
 textDataParser.h
-D:/Coding/C++/reservoirAlgorithm/textDataParser.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.h
 reservoirSamplingAlgorithm.h
-D:/Coding/C++/reservoirAlgorithm/reservoirSamplingAlgorithm.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.h
 biasedReservoirSamplingAlgorithm.h
-D:/Coding/C++/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/biasedReservoirSamplingAlgorithm.h
 
-D:/Coding/C++/reservoirAlgorithm/reservoirSamplingAlgorithm.cpp
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.cpp
 reservoirSamplingAlgorithm.h
-D:/Coding/C++/reservoirAlgorithm/reservoirSamplingAlgorithm.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.h
 
-D:/Coding/C++/reservoirAlgorithm/reservoirSamplingAlgorithm.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/reservoirSamplingAlgorithm.h
 textDataReader.h
-D:/Coding/C++/reservoirAlgorithm/textDataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
 textDataParser.h
-D:/Coding/C++/reservoirAlgorithm/textDataParser.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.h
 
-D:/Coding/C++/reservoirAlgorithm/textDataParser.cpp
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.cpp
 textDataParser.h
-D:/Coding/C++/reservoirAlgorithm/textDataParser.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.h
 sstream
 -
 
-D:/Coding/C++/reservoirAlgorithm/textDataParser.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataParser.h
 string
 -
 vector
@@ -66,17 +66,17 @@ vector
 c++/iostream
 -
 dataParser.h
-D:/Coding/C++/reservoirAlgorithm/dataParser.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/dataParser.h
 
-D:/Coding/C++/reservoirAlgorithm/textDataReader.cpp
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.cpp
 c++/iostream
 -
 textDataReader.h
-D:/Coding/C++/reservoirAlgorithm/textDataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
 
-D:/Coding/C++/reservoirAlgorithm/textDataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/textDataReader.h
 dataReader.h
-D:/Coding/C++/reservoirAlgorithm/dataReader.h
+C:/Users/Tomek/ClionProjects/reservoirAlgorithm/dataReader.h
 fstream
 -
 string

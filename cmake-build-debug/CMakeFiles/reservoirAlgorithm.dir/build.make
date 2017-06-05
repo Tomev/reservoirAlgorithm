@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.2\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Coding\C++\reservoirAlgorithm
+CMAKE_SOURCE_DIR = C:\Users\Tomek\ClionProjects\reservoirAlgorithm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Coding\C++\reservoirAlgorithm\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/reservoirAlgorithm.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/reservoirAlgorithm.dir/flags.make
 
 CMakeFiles/reservoirAlgorithm.dir/main.cpp.obj: CMakeFiles/reservoirAlgorithm.dir/flags.make
 CMakeFiles/reservoirAlgorithm.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Coding\C++\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/main.cpp.obj"
-	D:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\main.cpp.obj -c D:\Coding\C++\reservoirAlgorithm\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/main.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\main.cpp.obj -c C:\Users\Tomek\ClionProjects\reservoirAlgorithm\main.cpp
 
 CMakeFiles/reservoirAlgorithm.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reservoirAlgorithm.dir/main.cpp.i"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Coding\C++\reservoirAlgorithm\main.cpp > CMakeFiles\reservoirAlgorithm.dir\main.cpp.i
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tomek\ClionProjects\reservoirAlgorithm\main.cpp > CMakeFiles\reservoirAlgorithm.dir\main.cpp.i
 
 CMakeFiles/reservoirAlgorithm.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reservoirAlgorithm.dir/main.cpp.s"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Coding\C++\reservoirAlgorithm\main.cpp -o CMakeFiles\reservoirAlgorithm.dir\main.cpp.s
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Tomek\ClionProjects\reservoirAlgorithm\main.cpp -o CMakeFiles\reservoirAlgorithm.dir\main.cpp.s
 
 CMakeFiles/reservoirAlgorithm.dir/main.cpp.obj.requires:
 
@@ -82,16 +82,16 @@ CMakeFiles/reservoirAlgorithm.dir/main.cpp.obj.provides.build: CMakeFiles/reserv
 
 CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj: CMakeFiles/reservoirAlgorithm.dir/flags.make
 CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj: ../reservoirSamplingAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Coding\C++\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj"
-	D:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\reservoirSamplingAlgorithm.cpp.obj -c D:\Coding\C++\reservoirAlgorithm\reservoirSamplingAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\reservoirSamplingAlgorithm.cpp.obj -c C:\Users\Tomek\ClionProjects\reservoirAlgorithm\reservoirSamplingAlgorithm.cpp
 
 CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.i"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Coding\C++\reservoirAlgorithm\reservoirSamplingAlgorithm.cpp > CMakeFiles\reservoirAlgorithm.dir\reservoirSamplingAlgorithm.cpp.i
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tomek\ClionProjects\reservoirAlgorithm\reservoirSamplingAlgorithm.cpp > CMakeFiles\reservoirAlgorithm.dir\reservoirSamplingAlgorithm.cpp.i
 
 CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.s"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Coding\C++\reservoirAlgorithm\reservoirSamplingAlgorithm.cpp -o CMakeFiles\reservoirAlgorithm.dir\reservoirSamplingAlgorithm.cpp.s
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Tomek\ClionProjects\reservoirAlgorithm\reservoirSamplingAlgorithm.cpp -o CMakeFiles\reservoirAlgorithm.dir\reservoirSamplingAlgorithm.cpp.s
 
 CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj.requires:
 
@@ -106,16 +106,16 @@ CMakeFiles/reservoirAlgorithm.dir/reservoirSamplingAlgorithm.cpp.obj.provides.bu
 
 CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj: CMakeFiles/reservoirAlgorithm.dir/flags.make
 CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj: ../textDataReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Coding\C++\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj"
-	D:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\textDataReader.cpp.obj -c D:\Coding\C++\reservoirAlgorithm\textDataReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\textDataReader.cpp.obj -c C:\Users\Tomek\ClionProjects\reservoirAlgorithm\textDataReader.cpp
 
 CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.i"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Coding\C++\reservoirAlgorithm\textDataReader.cpp > CMakeFiles\reservoirAlgorithm.dir\textDataReader.cpp.i
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tomek\ClionProjects\reservoirAlgorithm\textDataReader.cpp > CMakeFiles\reservoirAlgorithm.dir\textDataReader.cpp.i
 
 CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.s"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Coding\C++\reservoirAlgorithm\textDataReader.cpp -o CMakeFiles\reservoirAlgorithm.dir\textDataReader.cpp.s
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Tomek\ClionProjects\reservoirAlgorithm\textDataReader.cpp -o CMakeFiles\reservoirAlgorithm.dir\textDataReader.cpp.s
 
 CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj.requires:
 
@@ -130,16 +130,16 @@ CMakeFiles/reservoirAlgorithm.dir/textDataReader.cpp.obj.provides.build: CMakeFi
 
 CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj: CMakeFiles/reservoirAlgorithm.dir/flags.make
 CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj: ../textDataParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Coding\C++\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj"
-	D:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\textDataParser.cpp.obj -c D:\Coding\C++\reservoirAlgorithm\textDataParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\textDataParser.cpp.obj -c C:\Users\Tomek\ClionProjects\reservoirAlgorithm\textDataParser.cpp
 
 CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.i"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Coding\C++\reservoirAlgorithm\textDataParser.cpp > CMakeFiles\reservoirAlgorithm.dir\textDataParser.cpp.i
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tomek\ClionProjects\reservoirAlgorithm\textDataParser.cpp > CMakeFiles\reservoirAlgorithm.dir\textDataParser.cpp.i
 
 CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.s"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Coding\C++\reservoirAlgorithm\textDataParser.cpp -o CMakeFiles\reservoirAlgorithm.dir\textDataParser.cpp.s
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Tomek\ClionProjects\reservoirAlgorithm\textDataParser.cpp -o CMakeFiles\reservoirAlgorithm.dir\textDataParser.cpp.s
 
 CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj.requires:
 
@@ -154,16 +154,16 @@ CMakeFiles/reservoirAlgorithm.dir/textDataParser.cpp.obj.provides.build: CMakeFi
 
 CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.obj: CMakeFiles/reservoirAlgorithm.dir/flags.make
 CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.obj: ../biasedReservoirSamplingAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Coding\C++\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.obj"
-	D:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\biasedReservoirSamplingAlgorithm.cpp.obj -c D:\Coding\C++\reservoirAlgorithm\biasedReservoirSamplingAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reservoirAlgorithm.dir\biasedReservoirSamplingAlgorithm.cpp.obj -c C:\Users\Tomek\ClionProjects\reservoirAlgorithm\biasedReservoirSamplingAlgorithm.cpp
 
 CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.i"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Coding\C++\reservoirAlgorithm\biasedReservoirSamplingAlgorithm.cpp > CMakeFiles\reservoirAlgorithm.dir\biasedReservoirSamplingAlgorithm.cpp.i
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tomek\ClionProjects\reservoirAlgorithm\biasedReservoirSamplingAlgorithm.cpp > CMakeFiles\reservoirAlgorithm.dir\biasedReservoirSamplingAlgorithm.cpp.i
 
 CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.s"
-	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Coding\C++\reservoirAlgorithm\biasedReservoirSamplingAlgorithm.cpp -o CMakeFiles\reservoirAlgorithm.dir\biasedReservoirSamplingAlgorithm.cpp.s
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Tomek\ClionProjects\reservoirAlgorithm\biasedReservoirSamplingAlgorithm.cpp -o CMakeFiles\reservoirAlgorithm.dir\biasedReservoirSamplingAlgorithm.cpp.s
 
 CMakeFiles/reservoirAlgorithm.dir/biasedReservoirSamplingAlgorithm.cpp.obj.requires:
 
@@ -196,7 +196,7 @@ reservoirAlgorithm.exe: CMakeFiles/reservoirAlgorithm.dir/build.make
 reservoirAlgorithm.exe: CMakeFiles/reservoirAlgorithm.dir/linklibs.rsp
 reservoirAlgorithm.exe: CMakeFiles/reservoirAlgorithm.dir/objects1.rsp
 reservoirAlgorithm.exe: CMakeFiles/reservoirAlgorithm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Coding\C++\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable reservoirAlgorithm.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable reservoirAlgorithm.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\reservoirAlgorithm.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -217,6 +217,6 @@ CMakeFiles/reservoirAlgorithm.dir/clean:
 .PHONY : CMakeFiles/reservoirAlgorithm.dir/clean
 
 CMakeFiles/reservoirAlgorithm.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Coding\C++\reservoirAlgorithm D:\Coding\C++\reservoirAlgorithm D:\Coding\C++\reservoirAlgorithm\cmake-build-debug D:\Coding\C++\reservoirAlgorithm\cmake-build-debug D:\Coding\C++\reservoirAlgorithm\cmake-build-debug\CMakeFiles\reservoirAlgorithm.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Tomek\ClionProjects\reservoirAlgorithm C:\Users\Tomek\ClionProjects\reservoirAlgorithm C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug C:\Users\Tomek\ClionProjects\reservoirAlgorithm\cmake-build-debug\CMakeFiles\reservoirAlgorithm.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/reservoirAlgorithm.dir/depend
 
