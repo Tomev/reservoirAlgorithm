@@ -33,7 +33,6 @@ void biasedReservoirSamplingAlgorithm::fillReservoir(std::vector<sample> *reserv
       // Add new data to the reservoir
       reader->getNextRawDatum(&rawData);
       parser->parseData(&rawData, &(reservoir->at(indexOfSampleToWriteOn)));
-      reservoir->at(indexOfSampleToWriteOn).dataId = step;
     }
 }
 

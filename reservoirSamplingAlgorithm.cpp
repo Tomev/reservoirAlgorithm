@@ -4,10 +4,10 @@
 
 #include "reservoirSamplingAlgorithm.h"
 
-reservoirSamplingAlgorithm::reservoirSamplingAlgorithm(textDataReader *reader, textDataParser *parser) :
+reservoirSamplingAlgorithm::reservoirSamplingAlgorithm(dataReader *reader, dataParser *parser) :
 reader(reader), parser(parser) {}
 
-void reservoirSamplingAlgorithm::fillReservoir(std::vector<sample> *reservoir)
+void reservoirSamplingAlgorithm::fillReservoir(void *reservoir)
 {
   initializeReservoir(reservoir);
 
@@ -25,14 +25,12 @@ void reservoirSamplingAlgorithm::fillReservoir(std::vector<sample> *reservoir)
       // Adding to reservoir
       int idxToDelete = (((double) rand() / (RAND_MAX)) * RESERVOIR_SIZE);
 
-      parser->parseData(&rawData, &(reservoir->at(idxToDelete)));
-
-      reservoir->at(idxToDelete).dataId = step;
+      parser->writeDatumOnPosition(&rawData, reservoir, idxToDelete);
     }
   }
 }
 
-void reservoirSamplingAlgorithm::initializeReservoir(std::vector<sample> *reservoir)
+void reservoirSamplingAlgorithm::initializeReservoir(void *reservoir)
 {
     std::string rawData;
 
@@ -40,9 +38,8 @@ void reservoirSamplingAlgorithm::initializeReservoir(std::vector<sample> *reserv
     {
         reader->getNextRawDatum(&rawData);
 
-        reservoir->push_back(sample());
+        parser->addDatumToContainer(reservoir);
 
-        parser->parseData(&rawData, &(reservoir->at(reservoir->size()-1)));
-        reservoir->at(reservoir->size()-1).dataId = step;
+        parser->writeDatumOnPosition(&rawData, reservoir, step);
     }
 }

@@ -38,8 +38,8 @@ int main()
   while(line.find("@data")) tdr.getNextRawDatum(&line);
   tdr.getNextRawDatum(&line);
 
-  biasedReservoirSamplingAlgorithm a(&tdp, &tdr);
-  //reservoirSamplingAlgorithm a(&tdr, &tdp);
+  //biasedReservoirSamplingAlgorithm a(&tdp, &tdr);
+  reservoirSamplingAlgorithm a(&tdr, &tdp);
 
   std::vector<sample> reservoir;
 

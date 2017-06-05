@@ -20,3 +20,14 @@ void textDataParser::parseData(void *source, void *target)
   while(getline(ss, value, ',')) sampleHolder->values.push_back(value);
 
 }
+
+void textDataParser::addDatumToContainer(void *container)
+{
+  (static_cast<std::vector<sample>*>(container))->push_back(sample());
+}
+
+void textDataParser::writeDatumOnPosition(void *datum, void *container, int position)
+{
+  parseData(datum, &(static_cast<std::vector<sample>*>(container)->at(position)));
+}
+

@@ -13,17 +13,18 @@ class reservoirSamplingAlgorithm
 
   public:
 
-    reservoirSamplingAlgorithm(textDataReader *reader, textDataParser* parser);
-    void fillReservoir(std::vector<sample> *reservoir);
+    reservoirSamplingAlgorithm(dataReader *reader, dataParser* parser);
+    void fillReservoir(void *reservoir);
 
   private:
     const int RESERVOIR_SIZE = 1000;
     const int STEPS_NUMBER = 20000;
 
-    textDataReader *reader;
-    textDataParser *parser;
+    dataReader *reader;
+    dataParser *parser;
 
-    void initializeReservoir(std::vector<sample> *reservoir);
+
+    void initializeReservoir(void *reservoir);
 
 };
 
