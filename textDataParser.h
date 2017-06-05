@@ -38,7 +38,7 @@ class textDataParser : public dataParser
   public:
 
     void parseData(void* source, void *target);
-    void addDatumToContainer(void *container);
+    int addDatumToContainer(void *container);
     void writeDatumOnPosition(void *datum, void *container, int position);
 };
 

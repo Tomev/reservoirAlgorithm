@@ -21,9 +21,12 @@ void textDataParser::parseData(void *source, void *target)
 
 }
 
-void textDataParser::addDatumToContainer(void *container)
+int textDataParser::addDatumToContainer(void *container)
 {
-  (static_cast<std::vector<sample>*>(container))->push_back(sample());
+  std::vector<sample> *samples = static_cast<std::vector<sample>*>(container);
+  samples->push_back(sample());
+
+  return samples->size();
 }
 
 void textDataParser::writeDatumOnPosition(void *datum, void *container, int position)

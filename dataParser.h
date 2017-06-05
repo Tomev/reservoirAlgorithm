@@ -10,7 +10,7 @@ class dataParser
   public:
 
     virtual void parseData(void* source, void *target) = 0;
-    virtual void addDatumToContainer(void *container) = 0;
+    virtual int addDatumToContainer(void *container) = 0;
     virtual void writeDatumOnPosition(void *datum, void *container, int position) = 0;
 };
 

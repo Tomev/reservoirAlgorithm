@@ -17,8 +17,8 @@ class biasedReservoirSamplingAlgorithm {
 
     public:
 
-        biasedReservoirSamplingAlgorithm(textDataParser *parser, textDataReader *reader);
-        void fillReservoir(std::vector<sample> *reservoir);
+        biasedReservoirSamplingAlgorithm(dataParser *parser, dataReader *reader);
+        void fillReservoir(void *reservoir);
 
     private:
 
@@ -27,15 +27,13 @@ class biasedReservoirSamplingAlgorithm {
     // Fraction of reservoir filled is also a success rate of deleting a reservoir member.
     double fractionOfReservoirFilled = 0.0;
 
-    textDataReader *reader;
-    textDataParser *parser;
+    dataReader *reader;
+    dataParser *parser;
 
     const int STEPS_NUMBER = 20000;
+    //const int RESERVOIR_SIZE = 1000;
 
-    void updateFractionOfReservoirFilled();
-
-
-    void updateFractionOfReservoirFilled(std::vector<sample> *reservoir);
+    void updateFractionOfReservoirFilled(int currentReservoirSize);
 };
 
 
