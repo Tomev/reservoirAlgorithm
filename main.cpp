@@ -8,7 +8,7 @@
 #include "textDataReader.h"
 #include "textDataParser.h"
 
-#include "reservoirSamplingAlgorithm.h"
+#include "basicReservoirSamplingAlgorithm.h"
 #include "biasedReservoirSamplingAlgorithm.h"
 
 struct attributeData

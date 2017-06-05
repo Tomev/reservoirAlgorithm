@@ -7,6 +7,7 @@
 
 #include "dataReader.h"
 #include "dataParser.h"
+#include "reservoirSamplingAlgorithm.h"
 
 #include <random>
 
@@ -15,7 +16,7 @@
  *      On biased reservoir sampling in the presence of stream evolution by Aggarwal C..
  */
 
-class biasedReservoirSamplingAlgorithm {
+class biasedReservoirSamplingAlgorithm : public reservoirSamplingAlgorithm {
 
     public:
 
@@ -28,9 +29,6 @@ class biasedReservoirSamplingAlgorithm {
     double  biasRate = 0.001;
     // Fraction of reservoir filled is also a success rate of deleting a reservoir member.
     double fractionOfReservoirFilled = 0.0;
-
-    dataReader *reader;
-    dataParser *parser;
 
     const int STEPS_NUMBER = 20000;
     //const int RESERVOIR_SIZE = 1000;

@@ -2,12 +2,12 @@
 // Created by Tomev on 29.05.2017.
 //
 
-#include "reservoirSamplingAlgorithm.h"
+#include "basicReservoirSamplingAlgorithm.h"
 
-reservoirSamplingAlgorithm::reservoirSamplingAlgorithm(dataReader *reader, dataParser *parser) :
+basicReservoirSamplingAlgorithm::basicReservoirSamplingAlgorithm(dataReader *reader, dataParser *parser) :
 reader(reader), parser(parser) {}
 
-void reservoirSamplingAlgorithm::fillReservoir(void *reservoir)
+void basicReservoirSamplingAlgorithm::fillReservoir(void *reservoir)
 {
   initializeReservoir(reservoir);
 
@@ -30,7 +30,7 @@ void reservoirSamplingAlgorithm::fillReservoir(void *reservoir)
   }
 }
 
-void reservoirSamplingAlgorithm::initializeReservoir(void *reservoir)
+void basicReservoirSamplingAlgorithm::initializeReservoir(void *reservoir)
 {
     std::string rawData;
 

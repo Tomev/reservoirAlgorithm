@@ -3,5 +3,5 @@ project(reservoirAlgorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp reservoirSamplingAlgorithm.cpp reservoirSamplingAlgorithm.h dataParser.h dataReader.h textDataReader.cpp textDataReader.h textDataParser.cpp textDataParser.h biasedReservoirSamplingAlgorithm.cpp biasedReservoirSamplingAlgorithm.h)
+set(SOURCE_FILES main.cpp basicReservoirSamplingAlgorithm.cpp basicReservoirSamplingAlgorithm.h dataParser.h dataReader.h textDataReader.cpp textDataReader.h textDataParser.cpp textDataParser.h biasedReservoirSamplingAlgorithm.cpp biasedReservoirSamplingAlgorithm.h reservoirSamplingAlgorithm.h)
 add_executable(reservoirAlgorithm ${SOURCE_FILES})
