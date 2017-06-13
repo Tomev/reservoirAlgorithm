@@ -11,8 +11,6 @@
 #include "basicReservoirSamplingAlgorithm.h"
 #include "biasedReservoirSamplingAlgorithm.h"
 
-void gatherAttributesData(textDataReader* tdr);
-
 int main()
 {
   // Initialize time-dependent random seed
