@@ -15,30 +15,8 @@ biasedReservoirSamplingAlgorithm::biasedReservoirSamplingAlgorithm(
 
 void biasedReservoirSamplingAlgorithm::fillReservoir(std::vector<sample*> *reservoir)
 {
-    int indexOfSampleToWriteOn;
-
     // For each incoming data sample
-    for(int step = 0; step < stepsNumber; ++step)
-    {
-      updateFractionOfReservoirFilled(reservoir->size());
-
-      // Check if a sample should be removed
-      if(fractionOfReservoirFilled >= ((double) rand() / (RAND_MAX)))
-      {
-          // If so randomly choose a sample
-          indexOfSampleToWriteOn = (((double) rand() / (RAND_MAX)) * (reservoir->size() - 1));
-      }
-      else
-      {
-        // If not add new sample to reservoir
-        parser->addDatumToContainer(reservoir);
-        indexOfSampleToWriteOn  = reservoir->size() - 1;
-      }
-
-      // Add new data to the reservoir
-      reader->getNextRawDatum(parser->buffor);
-      parser->writeDatumOnPosition(reservoir, indexOfSampleToWriteOn);
-    }
+    for(int step = 0; step < stepsNumber; ++step) performSingleStep(reservoir, stepsNumber);
 }
 
 void biasedReservoirSamplingAlgorithm::updateFractionOfReservoirFilled(int currentReservoirSize)
@@ -49,7 +27,26 @@ void biasedReservoirSamplingAlgorithm::updateFractionOfReservoirFilled(int curre
 
 void biasedReservoirSamplingAlgorithm::performSingleStep(std::vector<sample *> *reservoir, int stepNumber)
 {
+  int indexOfSampleToWriteOn;
 
+  updateFractionOfReservoirFilled(reservoir->size());
+
+  // Check if a sample should be removed
+  if(fractionOfReservoirFilled >= ((double) rand() / (RAND_MAX)))
+  {
+    // If so randomly choose a sample
+    indexOfSampleToWriteOn = (((double) rand() / (RAND_MAX)) * (reservoir->size() - 1));
+  }
+  else
+  {
+    // If not add new sample to reservoir
+    indexOfSampleToWriteOn  = reservoir->size();
+    parser->addDatumToContainer(reservoir);
+  }
+
+  // Add new data to the reservoir
+  reader->getNextRawDatum(parser->buffor);
+  parser->writeDatumOnPosition(reservoir, indexOfSampleToWriteOn);
 }
 
 
