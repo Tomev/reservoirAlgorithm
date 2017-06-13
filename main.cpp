@@ -8,7 +8,7 @@
 #include "textDataReader.h"
 #include "textDataParser.h"
 
-#include "reservoirSamplingAlgorithm.h"
+#include "basicReservoirSamplingAlgorithm.h"
 #include "biasedReservoirSamplingAlgorithm.h"
 
 std::vector<attributeData> attributes;
@@ -32,8 +32,8 @@ int main()
   while(line.find("@data")) tdr.getNextRawDatum(&line);
   tdr.getNextRawDatum(&line);
 
-  biasedReservoirSamplingAlgorithm a(&tdp, &tdr);
-  //reservoirSamplingAlgorithm a(&tdr, &tdp);
+  //biasedReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 20000);
+  basicReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 20000);
 
   std::vector<sample> reservoir;
 

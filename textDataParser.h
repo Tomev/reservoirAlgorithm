@@ -5,20 +5,23 @@
 #ifndef RESERVOIRALGORITHM_TEXTDATAPARSER_H
 #define RESERVOIRALGORITHM_TEXTDATAPARSER_H
 
+/*
+ * Parsing from .arff files to sample.
+ */
+
+#include "dataParser.h"
+
 #include <string>
 #include <vector>
 #include <c++/iostream>
 
-#include "dataParser.h"
-
 struct sample
 {
-  long dataId;
   std::vector<std::string> values;
 
   void print()
   {
-    std::cout << "Step: " << dataId << ". Data: ";
+    std::cout << "Data: ";
 
     for(int i = 0; i < values.size(); ++i)
     {
@@ -33,8 +36,12 @@ class textDataParser : public dataParser
 {
 
   public:
-    void parseData(void* source, void *target);
 
+    textDataParser();
+
+    void parseData(void *target);
+    int addDatumToContainer(void *container);
+    void writeDatumOnPosition(void *container, int position);
 };
 
 

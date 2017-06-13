@@ -4,43 +4,47 @@
 
 #include "biasedReservoirSamplingAlgorithm.h"
 
-biasedReservoirSamplingAlgorithm::biasedReservoirSamplingAlgorithm(textDataParser *parser, textDataReader *reader):
-reader(reader), parser(parser){}
-
-void biasedReservoirSamplingAlgorithm::fillReservoir(std::vector<sample> *reservoir)
+biasedReservoirSamplingAlgorithm::biasedReservoirSamplingAlgorithm(
+        dataReader *reader, dataParser *parser, int reservoirSize, int stepsNumber):
+        biasRate(1.0/reservoirSize)
 {
-    std::string rawData;
-    int indexOfSampleToWriteOn;
+  this->reader = reader;
+  this->parser = parser;
+  this->stepsNumber = stepsNumber;
+}
+
+void biasedReservoirSamplingAlgorithm::fillReservoir(void *reservoir)
+{
+    int indexOfSampleToWriteOn, currentReservoirSize = 0;
 
     // For each incoming data sample
-    for(int step = 0; step < STEPS_NUMBER; ++step)
+    for(int step = 0; step < stepsNumber; ++step)
     {
-      updateFractionOfReservoirFilled(reservoir);
+      updateFractionOfReservoirFilled(currentReservoirSize);
 
       // Check if a sample should be removed
       if(fractionOfReservoirFilled >= ((double) rand() / (RAND_MAX)))
       {
           // If so randomly choose a sample
-          indexOfSampleToWriteOn = (((double) rand() / (RAND_MAX)) * (reservoir->size()-1));
+          indexOfSampleToWriteOn = (((double) rand() / (RAND_MAX)) * (currentReservoirSize - 1));
       }
       else
       {
-          // If not add new sample to reservoir
-          indexOfSampleToWriteOn = reservoir->size();
-          reservoir->push_back(sample());
+        // If not add new sample to reservoir
+        currentReservoirSize = parser->addDatumToContainer(reservoir);
+        indexOfSampleToWriteOn  = currentReservoirSize - 1;
       }
 
       // Add new data to the reservoir
-      reader->getNextRawDatum(&rawData);
-      parser->parseData(&rawData, &(reservoir->at(indexOfSampleToWriteOn)));
-      reservoir->at(indexOfSampleToWriteOn).dataId = step;
+      reader->getNextRawDatum(parser->buffor);
+      parser->writeDatumOnPosition(reservoir, indexOfSampleToWriteOn);
     }
 }
 
-void biasedReservoirSamplingAlgorithm::updateFractionOfReservoirFilled(std::vector<sample> * reservoir)
+void biasedReservoirSamplingAlgorithm::updateFractionOfReservoirFilled(int currentReservoirSize)
 {
     // Bias rate is equal to 1 over reservoir capacity, thus:
-    this->fractionOfReservoirFilled = reservoir->size() * biasRate;
+    this->fractionOfReservoirFilled = currentReservoirSize * biasRate;
 }
 
 
