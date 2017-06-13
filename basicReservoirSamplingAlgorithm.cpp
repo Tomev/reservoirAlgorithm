@@ -5,28 +5,28 @@
 #include "basicReservoirSamplingAlgorithm.h"
 
 basicReservoirSamplingAlgorithm::basicReservoirSamplingAlgorithm(
-        dataReader *reader, dataParser *parser, int reservoirSize, int stepsNumber) :
-        reservoirSize(reservoirSize)
+        dataReader *reader, dataParser *parser, int reservoirMaxSize, int stepsNumber) :
+        reservoirMaxSize(reservoirMaxSize)
 {
   this->reader = reader;
   this->parser = parser;
   this->stepsNumber = stepsNumber;
 }
 
-void basicReservoirSamplingAlgorithm::fillReservoir(void *reservoir)
+void basicReservoirSamplingAlgorithm::fillReservoir(std::vector<sample*> *reservoir)
 {
   initializeReservoir(reservoir);
 
   double addChance;
 
-  for(int step = reservoirSize+1; step < reservoirSize; ++step)
+  for(int step = reservoirMaxSize+1; step < reservoirMaxSize; ++step)
   {
-    addChance = (double) reservoirSize/step;
+    addChance = (double) reservoirMaxSize/step;
 
     if(addChance > ((double) rand() / (RAND_MAX)))
     {
       // Adding to reservoir
-      int idxToDelete = (((double) rand() / (RAND_MAX)) * reservoirSize);
+      int idxToDelete = (((double) rand() / (RAND_MAX)) * reservoirMaxSize);
 
       reader->getNextRawDatum(parser->buffor);
       parser->writeDatumOnPosition(reservoir, idxToDelete);
@@ -34,14 +34,22 @@ void basicReservoirSamplingAlgorithm::fillReservoir(void *reservoir)
   }
 }
 
-void basicReservoirSamplingAlgorithm::initializeReservoir(void *reservoir)
+void basicReservoirSamplingAlgorithm::initializeReservoir(std::vector<sample*> *reservoir)
 {
-    for(int step = 0; step < reservoirSize; ++step)
-    {
-        reader->getNextRawDatum(parser->buffor);
+  while(reservoir->size() < reservoirMaxSize) addDatumToReservoir(reservoir);
+}
 
-        parser->addDatumToContainer(reservoir);
+void basicReservoirSamplingAlgorithm::performSingleStep(std::vector<sample*> *reservoir)
+{
+  if(reservoir->size() < reservoirMaxSize) addDatumToReservoir(reservoir);
 
-        parser->writeDatumOnPosition(reservoir, step);
-    }
+}
+
+void basicReservoirSamplingAlgorithm::addDatumToReservoir(std::vector<sample *> *reservoir)
+{
+  reader->getNextRawDatum(parser->buffor);
+
+  parser->addDatumToContainer(reservoir);
+
+  parser->writeDatumOnPosition(reservoir, reservoir->size()-1);
 }
