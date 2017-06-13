@@ -25,8 +25,8 @@ int main()
 
   tdr.gatherAttributesData(NULL);
 
-  //biasedReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 20000);
-  basicReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 10000);
+  biasedReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 20000);
+  //basicReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 10000);
 
   std::vector<sample*> reservoir;
 

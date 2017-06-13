@@ -5,34 +5,34 @@
 #include "biasedReservoirSamplingAlgorithm.h"
 
 biasedReservoirSamplingAlgorithm::biasedReservoirSamplingAlgorithm(
-        dataReader *reader, dataParser *parser, int reservoirSize, int stepsNumber):
-        biasRate(1.0/reservoirSize)
+        dataReader *reader, dataParser *parser, int reservoirMaxSize, int stepsNumber):
+        biasRate(1.0/reservoirMaxSize)
 {
   this->reader = reader;
   this->parser = parser;
   this->stepsNumber = stepsNumber;
 }
 
-void biasedReservoirSamplingAlgorithm::fillReservoir(void *reservoir)
+void biasedReservoirSamplingAlgorithm::fillReservoir(std::vector<sample*> *reservoir)
 {
-    int indexOfSampleToWriteOn, currentReservoirSize = 0;
+    int indexOfSampleToWriteOn;
 
     // For each incoming data sample
     for(int step = 0; step < stepsNumber; ++step)
     {
-      updateFractionOfReservoirFilled(currentReservoirSize);
+      updateFractionOfReservoirFilled(reservoir->size());
 
       // Check if a sample should be removed
       if(fractionOfReservoirFilled >= ((double) rand() / (RAND_MAX)))
       {
           // If so randomly choose a sample
-          indexOfSampleToWriteOn = (((double) rand() / (RAND_MAX)) * (currentReservoirSize - 1));
+          indexOfSampleToWriteOn = (((double) rand() / (RAND_MAX)) * (reservoir->size() - 1));
       }
       else
       {
         // If not add new sample to reservoir
-        currentReservoirSize = parser->addDatumToContainer(reservoir);
-        indexOfSampleToWriteOn  = currentReservoirSize - 1;
+        parser->addDatumToContainer(reservoir);
+        indexOfSampleToWriteOn  = reservoir->size() - 1;
       }
 
       // Add new data to the reservoir
@@ -45,6 +45,11 @@ void biasedReservoirSamplingAlgorithm::updateFractionOfReservoirFilled(int curre
 {
     // Bias rate is equal to 1 over reservoir capacity, thus:
     this->fractionOfReservoirFilled = currentReservoirSize * biasRate;
+}
+
+void biasedReservoirSamplingAlgorithm::performSingleStep(std::vector<sample *> *reservoir, int stepNumber)
+{
+
 }
 
 
