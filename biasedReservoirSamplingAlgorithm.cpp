@@ -45,7 +45,7 @@ void biasedReservoirSamplingAlgorithm::performSingleStep(std::vector<sample *> *
   }
 
   // Add new data to the reservoir
-  reader->getNextRawDatum(parser->buffor);
+  reader->getNextRawDatum(parser->buffer);
   parser->writeDatumOnPosition(reservoir, indexOfSampleToWriteOn);
 }
 

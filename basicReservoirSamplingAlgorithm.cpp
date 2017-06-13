@@ -34,7 +34,7 @@ void basicReservoirSamplingAlgorithm::performSingleStep(std::vector<sample*> *re
 
 void basicReservoirSamplingAlgorithm::addDatumToReservoir(std::vector<sample *> *reservoir)
 {
-  reader->getNextRawDatum(parser->buffor);
+  reader->getNextRawDatum(parser->buffer);
 
   parser->addDatumToContainer(reservoir);
 
@@ -50,7 +50,7 @@ void basicReservoirSamplingAlgorithm::addDatumOnRandomPosition(std::vector<sampl
 
 bool basicReservoirSamplingAlgorithm::shouldDatumBeAdded(int stepNumber)
 {
-  reader->getNextRawDatum(parser->buffor);
+  reader->getNextRawDatum(parser->buffer);
 
   double addChance = (double) reservoirMaxSize/stepNumber;
 
