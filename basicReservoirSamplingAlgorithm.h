@@ -17,7 +17,7 @@ class basicReservoirSamplingAlgorithm : public reservoirSamplingAlgorithm
     basicReservoirSamplingAlgorithm(dataReader *reader, dataParser* parser, int reservoirMaxSize, int stepsNumber);
 
     void fillReservoir(std::vector<sample*> *reservoir);
-    void performSingleStep(std::vector<sample*> *reservoir);
+    void performSingleStep(std::vector<sample*> *reservoir, int stepNumber);
 
   private:
 
@@ -25,7 +25,9 @@ class basicReservoirSamplingAlgorithm : public reservoirSamplingAlgorithm
 
     void initializeReservoir(std::vector<sample*> *reservoir);
 
-  void addDatumToReservoir(std::vector<sample *> *reservoir);
+    void addDatumToReservoir(std::vector<sample *> *reservoir);
+    bool shouldDatumBeAdded(int stepNumber);
+    void addDatumOnRandomPosition(std::vector<sample *> *reservoir);
 };
 
 

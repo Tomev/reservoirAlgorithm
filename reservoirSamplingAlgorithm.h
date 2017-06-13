@@ -15,7 +15,7 @@ class reservoirSamplingAlgorithm
 {
   public:
     virtual void fillReservoir(std::vector<sample*> *reservoir) = 0;
-    virtual void performSingleStep(std::vector<sample*> *reservoir) = 0;
+    virtual void performSingleStep(std::vector<sample*> *reservoir, int stepNumber) = 0;
 
   protected:
     dataParser *parser;

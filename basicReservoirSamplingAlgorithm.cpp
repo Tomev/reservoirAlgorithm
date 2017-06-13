@@ -17,21 +17,8 @@ void basicReservoirSamplingAlgorithm::fillReservoir(std::vector<sample*> *reserv
 {
   initializeReservoir(reservoir);
 
-  double addChance;
-
   for(int step = reservoirMaxSize+1; step < reservoirMaxSize; ++step)
-  {
-    addChance = (double) reservoirMaxSize/step;
-
-    if(addChance > ((double) rand() / (RAND_MAX)))
-    {
-      // Adding to reservoir
-      int idxToDelete = (((double) rand() / (RAND_MAX)) * reservoirMaxSize);
-
-      reader->getNextRawDatum(parser->buffor);
-      parser->writeDatumOnPosition(reservoir, idxToDelete);
-    }
-  }
+    if(shouldDatumBeAdded(step)) addDatumOnRandomPosition (reservoir);
 }
 
 void basicReservoirSamplingAlgorithm::initializeReservoir(std::vector<sample*> *reservoir)
@@ -39,10 +26,10 @@ void basicReservoirSamplingAlgorithm::initializeReservoir(std::vector<sample*> *
   while(reservoir->size() < reservoirMaxSize) addDatumToReservoir(reservoir);
 }
 
-void basicReservoirSamplingAlgorithm::performSingleStep(std::vector<sample*> *reservoir)
+void basicReservoirSamplingAlgorithm::performSingleStep(std::vector<sample*> *reservoir, int stepNumber)
 {
   if(reservoir->size() < reservoirMaxSize) addDatumToReservoir(reservoir);
-
+  else if(shouldDatumBeAdded(stepNumber)) addDatumOnRandomPosition(reservoir);
 }
 
 void basicReservoirSamplingAlgorithm::addDatumToReservoir(std::vector<sample *> *reservoir)
@@ -52,4 +39,20 @@ void basicReservoirSamplingAlgorithm::addDatumToReservoir(std::vector<sample *> 
   parser->addDatumToContainer(reservoir);
 
   parser->writeDatumOnPosition(reservoir, reservoir->size()-1);
+}
+
+void basicReservoirSamplingAlgorithm::addDatumOnRandomPosition(std::vector<sample *> *reservoir)
+{
+  int idxToDelete = (((double) rand() / (RAND_MAX)) * reservoir->size());
+
+  parser->writeDatumOnPosition(reservoir, idxToDelete);
+}
+
+bool basicReservoirSamplingAlgorithm::shouldDatumBeAdded(int stepNumber)
+{
+  reader->getNextRawDatum(parser->buffor);
+
+  double addChance = (double) reservoirMaxSize/stepNumber;
+
+  return (addChance > ((double) rand() / (RAND_MAX)));
 }
