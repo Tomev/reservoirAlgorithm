@@ -29,9 +29,6 @@ int main()
 
   tdr.gatherAttributesData(&attributes);
 
-  while(line.find("@data")) tdr.getNextRawDatum(&line);
-  tdr.getNextRawDatum(&line);
-
   //biasedReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 20000);
   basicReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 20000);
 

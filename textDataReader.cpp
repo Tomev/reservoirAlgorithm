@@ -26,35 +26,44 @@ void textDataReader::getNextRawDatum(void *target)
 
 void textDataReader::gatherAttributesData(void *attributesPtr)
 {
+
   // This only works for .arff files. Not tested for others.
   std::string line;
 
-  std::vector<attributeData> *attributes = static_cast<std::vector<attributeData>*>(attributesPtr);
-
-  // While line doesn't start with @attribute
-  while(line.find("@attribute")) getNextRawDatum(&line);
-
-  // While line starts with @attribute
-  while(!line.find("@attribute"))
+  if(attributesPtr != NULL)
   {
-    std::istringstream ss(line);
-    std::string substring;
+    std::vector<attributeData> *attributes = static_cast<std::vector<attributeData> *>(attributesPtr);
 
-    getline(ss, substring, ' ');
+    // While line doesn't start with @attribute
+    while (line.find("@attribute")) getNextRawDatum(&line);
 
-    attributes->push_back(attributeData());
+    // While line starts with @attribute
+    while (!line.find("@attribute")) {
+      std::istringstream ss(line);
+      std::string substring;
 
-    getline(ss, substring, ' ');
+      getline(ss, substring, ' ');
 
-    attributes->at(attributes->size()-1).attributeName = substring;
+      attributes->push_back(attributeData());
 
-    getline(ss, substring, ' ');
+      getline(ss, substring, ' ');
 
-    if(substring.find("Numeric")==0) attributes->at(attributes->size()-1).attributeType = substring;
-    else attributes->at(attributes->size()-1).attributeType = "Symbolic";
+      attributes->at(attributes->size() - 1).attributeName = substring;
 
-    getNextRawDatum(&line);
+      getline(ss, substring, ' ');
+
+      if (substring.find("Numeric") == 0) attributes->at(attributes->size() - 1).attributeType = substring;
+      else attributes->at(attributes->size() - 1).attributeType = "Symbolic";
+
+      getNextRawDatum(&line);
+    }
   }
+
+  // If pointer was null, then only prepare for data reading.
+
+  while(line.find("@data")) getNextRawDatum(&line);
+  getNextRawDatum(&line);
+
 }
 
 
