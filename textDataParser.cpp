@@ -14,7 +14,7 @@ textDataParser::textDataParser()
 void textDataParser::parseData(void *target)
 {
   std::string *line = static_cast<std::string*>(this->buffor);
-  sample *sampleHolder = static_cast<sample*>(target);
+  textDataSample *sampleHolder = static_cast<textDataSample*>(target);
 
   std::istringstream ss(*line);
   std::string value;
@@ -27,13 +27,13 @@ void textDataParser::parseData(void *target)
 
 int textDataParser::addDatumToContainer(void *container)
 {
-  std::vector<sample> *samples = static_cast<std::vector<sample>*>(container);
-  samples->push_back(sample());
+  std::vector<sample*> *samples = static_cast<std::vector<sample*>*>(container);
+  samples->push_back(new textDataSample());
 
   return samples->size();
 }
 
 void textDataParser::writeDatumOnPosition(void *container, int position)
 {
-  parseData(&(static_cast<std::vector<sample>*>(container)->at(position)));
+  parseData(static_cast<std::vector<sample*>*>(container)->at(position));
 }

@@ -11,8 +11,6 @@
 #include "basicReservoirSamplingAlgorithm.h"
 #include "biasedReservoirSamplingAlgorithm.h"
 
-std::vector<attributeData> attributes;
-
 void gatherAttributesData(textDataReader* tdr);
 
 int main()
@@ -27,21 +25,20 @@ int main()
   textDataReader tdr(&sourceFile);
   textDataParser tdp;
 
-  tdr.gatherAttributesData(&attributes);
+  tdr.gatherAttributesData(NULL);
 
-  //biasedReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 20000);
-  basicReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 20000);
+  biasedReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 20000);
+  //basicReservoirSamplingAlgorithm a(&tdr, &tdp, 1000, 10000);
 
-  std::vector<sample> reservoir;
+  std::vector<sample*> reservoir;
 
   a.fillReservoir(&reservoir);
 
   for(int i = 0; i < reservoir.size(); ++i)
   {
     std::cout << "Sample number " << i+1 << ": ";
-    reservoir.at(i).print();
+    reservoir.at(i)->print();
   }
-
 
   return 0;
 }

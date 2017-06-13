@@ -24,14 +24,13 @@ struct attributeData
   std::string attributeType;
 };
 
-
 class textDataReader : public dataReader
 {
   public:
     textDataReader(std::ifstream *sourceFile);
     void getNextRawDatum(void *target);
     void gatherAttributesData(void *attributes);
-
+    bool hasMoreData();
   private:
     std::ifstream *sourceFile;
 
